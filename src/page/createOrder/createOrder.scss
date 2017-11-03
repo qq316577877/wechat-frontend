@@ -1,0 +1,347 @@
+@charset "utf-8";
+
+@import "../.././scss/main.scss";
+
+#createOrderPage {
+  background-color: $base-font-light-black-color;
+  //height: 100%;
+  min-height: 100%;
+   @include font-dpr($base-font-size);
+  .mask{
+    .mask_content{
+      width:80%;
+      @include px2rem(padding-bottom, 20px);
+      @include px2rem(margin-top, 150px);
+    }
+    .successTitle{
+      text-align: center;
+      i{
+        display: inline-block;
+        @include px2rem(margin-top, 50px);
+        @include font-dpr(50px);
+        color:$base-font-color;
+      }
+    }
+    p{
+      @include font-dpr(26px);
+      color: #999;
+      @include px2rem(line-height, 38px);
+      //@include px2rem(margin-bottom, 100px);
+      @include px2rem(letter-spacing, 5px);
+    }
+    .baseButton{
+      @include px2rem(margin-top, 30px);
+    }
+  }
+  .yellowFont{
+    color:$base-light-color;;
+  }
+  .greenprice{
+    color:$base-font-color;
+  }
+
+  .createType{
+    display: flex;
+    @include px2rem(height, 100px);
+    @include px2rem(line-height, 100px);
+    div{
+      background-color: white;
+      flex:1;
+      text-align: center;
+      color:$base-font-black-weight-color;
+      @include px2rem(border-bottom-width,5px);
+      border-bottom-color: $base-background-color;
+      border-bottom-style: solid;
+       @include font-dpr(36px);
+      &.active{
+        color:$base-font-color;
+        @include px2rem(border-bottom-width,5px);
+        border-bottom-color: $base-font-color;
+        border-bottom-style: solid;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          border: 20px solid transparent;
+          @include px2rem(border-width, 24px);
+          border-bottom-color: $base-font-color;
+          @include px2rem(left, 175px);
+          @include px2rem(bottom, -1px);
+        }
+      }
+    }
+  }
+  .createOrderForm{
+    //ul{
+    //  @include px2rem(padding-bottom, 235px);
+    //}
+    .formlinelabel.containernumtype{
+      @include px2rem(padding-bottom, 205px);
+    }
+    .containerNum{
+      text-align: right;
+      div{
+        @include px2rem(margin-top, 10px);
+      }
+      span{
+        float:right;
+        @include font-dpr(60px);
+        text-align: center;
+        display: inline-block;
+        @include px2rem(width, 60px);
+        @include px2rem(height, 60px);
+        @include px2rem(line-height, 58px);
+        color:$base-font-black-color;
+        border: 1px solid $base-font-lightblack-color;
+      }
+      input{
+        float:right;
+        @include px2rem(width, 80px);
+        @include px2rem(height, 60px);
+        @include px2rem(line-height, 60px);
+        text-align: center;
+        @include font-dpr($base-font-size);
+        border-top: 1px solid $base-font-lightblack-color;
+        border-bottom: 1px solid $base-font-lightblack-color;
+      }
+    }
+    .sendProduct{
+      @include px2rem(padding, 30px);
+      background-color: white;
+      @include px2rem(margin-top, 24px);
+      h5{
+        @include font-dpr(34px);
+      }
+      hr{
+        background-color: $base-font-lightblack-color;
+        border: 0;
+        @include px2rem(height, 1px);
+      }
+      select{
+        @include px2rem(width, 300px);
+        text-align: center;
+      }
+      .dateDuring{
+        display: flex;
+        @include px2rem(margin-top, 20px);
+        input {
+          @include px2rem(padding-top, 5px);
+          @include px2rem(padding-bottom, 5px);
+          @include font-dpr(30px);
+          flex: 3;
+          border: 1px solid $base-font-lightblack-color;
+          text-align: center;
+        }
+        span{
+          @include px2rem(padding-top, 8px);
+          @include font-dpr(30px);
+          flex: 1;
+          text-align: center;
+
+        }
+      }
+      .totalnum{
+        text-align: right;
+      }
+    }
+    .containerInfo{
+      @include px2rem(margin-top, 20px);
+      border:0;
+      padding:0;
+      display: flex;
+      label{
+        @include font-dpr(34px);
+      }
+      &>div{
+          flex: 1;
+      }
+      select{
+        display: inline-block;
+        //float: right;
+        @include font-dpr(30px);
+        @include px2rem(height, 60px);
+        @include px2rem(margin-top, 10px);
+        color:$base-font-black-color;
+        border: 1px solid #cccccc;
+      }
+      .fruitType{
+        label,select{
+          @include font-dpr(30px);
+          display: block;
+        }
+      }
+      .containerNum{
+        label,input{
+          @include font-dpr(30px);
+        }
+        @include font-dpr(30px);
+      }
+    }
+    .productList{
+      @include px2rem(border-bottom-width, 1px);
+      //border-bottom-width: 1px;
+      border-bottom-color: $base-font-lightblack-color;
+      border-bottom-style: solid;
+      //button{
+      //  @include font-dpr(30px);
+      //  background-color: white;
+      //  border: 1px solid $base-font-lightblack-color;
+      //  @include border-radius-dpr(5px);
+      //  @include px2rem(margin-right, 10px);
+      //  @include px2rem(padding, 5px);
+      //}
+    }
+  }
+  .selectLoan{
+    position: relative;
+    @include px2rem(padding, 30px);
+    background-color: white;
+    h5{
+      @include font-dpr(35px);
+      color:$base-font-black-color;
+    }
+    input{
+      @include px2rem(width, 30px);
+      @include px2rem(height, 30px);
+    }
+    .usableAmount{
+      @include px2rem(margin-top, 25px);
+      @include font-dpr(30px);
+      color:$base-font-black-color;
+    }
+    .interestRate{
+      @include px2rem(margin-top, 9px);
+      @include font-dpr(26px);
+      color:$base-font-gray-color;
+    }
+    hr{
+      background-color: $base-font-lightblack-color;
+      border: 0;
+      @include px2rem(height, 2px);
+      //height: 1px
+    }
+    button{
+      position: absolute;
+      @include px2rem(right, 30px);
+      @include px2rem(bottom, 110px);
+      @include font-dpr(30px);
+      color:white;
+      background: -webkit-linear-gradient($base-font-yellow-light-color, $base-font-yellow-deep-color);
+      @include px2rem(padding-top, 10px);
+      @include px2rem(padding-bottom, 10px);
+      @include px2rem(padding-left, 17px);
+      @include px2rem(padding-right, 17px);
+      @include border-radius-dpr(4px);
+    }
+    .isUsedFund{
+      @include font-dpr(30px);
+      //color:$base-font-light-black-color;
+      span{
+        float: right;
+      }
+      label{
+        @include px2rem(margin-left, 50px);
+        @include font-dpr(28px);
+        input{
+          @include px2rem(width, 32px);
+          @include px2rem(height, 32px);
+          position: relative;
+          @include px2rem(top, 4px);
+        }
+      }
+    }
+  }
+  .announcement{
+      @include font-dpr(30px);
+  }
+
+  #productContainerList{
+    .containernumber{
+      div{
+        float:right;
+        @include px2rem(margin-top, 20px);
+      }
+      span{
+        float:right;
+        @include font-dpr(45px);
+        text-align: center;
+        display: inline-block;
+        @include px2rem(width, 60px);
+        @include px2rem(height, 60px);
+        @include px2rem(line-height, 60px);
+        color:$base-font-black-color;
+        border: 1px solid $base-font-lightblack-color;
+      }
+      input{
+        float:right;
+        @include px2rem(width, 80px);
+        @include px2rem(height, 60px);
+        @include px2rem(line-height, 60px);
+        text-align: center;
+        @include font-dpr($base-font-size);
+        border: 1px solid $base-font-lightblack-color;
+      }
+    }
+    .totalnum{
+      text-align: right;
+      @include px2rem(padding, 30px);
+      background-color: white;
+      .redprice{
+        color:$base-font-color;
+      }
+    }
+    .productList{
+      position: relative;
+      .addProduct{
+        position: absolute;
+        @include px2rem(right, 30px);
+        @include px2rem(top, 30px);
+        @include px2rem(height, 50px);
+        @include px2rem(width, 50px);
+        color:white;
+        text-align: center;
+        @include border-radius-dpr(50px);
+        @include font-dpr(60px);
+        @include px2rem(line-height, 44px);
+        background-color: $base-font-yellow-color;
+      }
+    }
+
+  }
+
+  //#commitBtn{
+  //  @include px2rem(bottom, 81px);
+  //}
+  #totalBuy{
+    position: fixed;
+    @include px2rem(bottom, 161px);
+    width: 100%;
+    background-color: white;
+    @include px2rem(height, 60px);
+    @include px2rem(line-height, 60px);
+    @include px2rem(padding-left, 20px);
+    i{
+      color:$base-light-color;
+      @include font-dpr(40px);
+    }
+    .number{
+      background-color: $alert-bg-color;
+      @include px2rem(padding, 5px);
+      @include border-radius-dpr(5px);
+      color: white;
+      position: relative;
+      @include px2rem(bottom, 20px);
+    }
+    .totalprice{
+      @include font-dpr(30px);
+      float: right;
+      @include px2rem(margin-left, 20px);
+      .greenprice{
+        color:$base-font-color;
+      }
+    }
+  }
+  .baseButton{
+    @include px2rem(padding-bottom, 40px);
+  }
+}

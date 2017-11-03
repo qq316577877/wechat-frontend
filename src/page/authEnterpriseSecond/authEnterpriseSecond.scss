@@ -1,0 +1,105 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#authEnterpriseSecond {
+    @include px2rem(margin-top, 20px);
+    .formInput {
+        @include px2rem(width, 510px);
+        @include font-dpr(34px);
+        font-weight: 100;
+    }
+    .showImg {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+    .infoHead {
+        display: inline-block;
+        @include font-dpr(30px);
+    }
+    .location {
+        @include px2rem(margin-left, 28px);
+        @include font-dpr(30px);
+    }
+    .flex_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #addressIn {
+        position: relative;
+        .infoHead {
+            position: absolute;
+        }
+        #textarea {
+            position: relative;
+            @include px2rem(left, 200px);
+        }
+    }
+    form label {
+        @include px2rem(margin-bottom, 40px);
+        display: block;
+        #capth {
+            width: 40%;
+        }
+    }
+    form label input[type="text"] {
+        @include font-dpr(30px);
+        width: 80%!important;
+        height: 1.06667rem;
+        padding-left: 0.13333rem;
+        color: #bbb;
+        border: none;
+        border-bottom: 1px solid #bbbbbb;
+    }
+    #labelTel {
+        @include px2rem(margin-top, 80px);
+    }
+    #addressLink {
+        width: 70%;
+        display: inline-block;
+    }
+    #upload {
+        @include px2rem(margin-left, 28px);
+        @include px2rem(height, 100px);
+        @include px2rem(line-height, 100px);
+        @include font-dpr(30px);
+    }
+    #uploadInfo {
+        color: #e60012;
+        @include font-dpr(20px);
+    }
+    .uploader {
+        @include px2rem(width, 250px);
+        @include px2rem(height, 170px);
+        display: inline-block;
+        @include px2rem(margin-top, 40px);
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        p {
+            text-align: center;
+            @include px2rem(margin-top, -40px);
+            color: #56b7fa;
+            @include font-dpr(26px);
+        }
+    }
+    #upLabel {
+        border-bottom: 1px solid #cccccc;
+        @include px2rem(padding-bottom, 40px);
+    }
+    #uploaderFirst {
+        @include px2rem(margin-left, 100px);
+        @include px2rem(margin-right, 50px);
+    }
+    .g-core-image-upload-btn {
+        @include px2rem(margin-top, -170px);
+        width: 100% !important;
+        height: 100% !important;
+        .g-core-image-upload-form {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+}

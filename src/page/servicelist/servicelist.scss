@@ -1,0 +1,136 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#serviceList {
+    background-color: $page-bg-color;
+    height: 100%;
+    -webkit-overflow-scrolling: touch;
+    @include font-dpr(30px);
+    color: #555;
+    box-sizing: border-box;
+    @include distance-dpr(padding, 20px, y);
+    @include distance-dpr(padding, 30px, x);
+    .fonts {
+        text-align: center;
+    }
+    .tit {
+        @include font-dpr(26px);
+    }
+    .loan-limit {
+        @include px2rem(height, 113px);
+        @include distance-dpr(padding, 7px, y);
+        text-align: center;
+        background: #ffb135;
+        color: #fff;
+        @include px2rem(margin-bottom, 20px);
+        .used {
+            font-weight: 600;
+            @include font-dpr(60px);
+        }
+        .hint {
+            @include font-dpr(26px);
+        }
+    }
+}
+
+#serviceList_ul {
+    li {
+        border: 1px solid #ccc;
+        @include px2rem(margin-bottom, 20px);
+        background: #fff;
+        .serviceList_top {
+            @include distance-dpr(padding, 20px, y);
+            @include distance-dpr(padding, 15px, x);
+            border-bottom: 1px solid #ccc;
+            .sign {
+                display: inline-block;
+                @include px2rem(width, 6px);
+                @include px2rem(height, 30px);
+                background: #ffb135;
+                @include px2rem(margin-right, 10px);
+                vertical-align: middle;
+                border-radius: 20px;
+            }
+            .top {
+                display: inline-block;
+                font-weight: 500;
+                vertical-align: middle;
+            }
+            .containerNo {
+                vertical-align: middle;
+                font-weight: 500;
+            }
+            .particulars {
+                color: #555;
+                @include font-dpr(26px);
+                font-weight: 500;
+                .foreword {
+                    font-weight: 100;
+                    @include font-dpr(36px);
+                    vertical-align: middle;
+                }
+            }
+        }
+        .serviceList_mid {
+            @include px2rem(padding-top, 40px);
+            .box {
+                display: flex;
+                justify-content: space-around;
+            }
+            .mid_foot {
+                @include px2rem(margin-top, 20px);
+                border-bottom: 1px solid gainsboro;
+                .interest {
+                    @include px2rem(height, 35px);
+                }
+            }
+            .offerLoan {
+                @include font-dpr(35px);
+                font-weight: 500;
+            }
+            .red {
+                color: #f00;
+            }
+            .fs {
+                @include font-dpr(26px);
+                color: #999;
+                @include px2rem(margin-top, 5px);
+                @include px2rem(margin-bottom, 20px);
+            }
+            .fw400 {
+                font-weight: 400;
+            }
+            .wire {
+                display: block;
+                @include px2rem(width, 50px);
+                height: 1px;
+                background: #ccc;
+                @include px2rem(margin-top, 55px);
+            }
+            .vertical {
+                display: block;
+                @include px2rem(width, 2px);
+                @include px2rem(height, 20px);
+                background: #ccc;
+                @include px2rem(margin-top, 30px);
+            }
+        }
+        .serviceList_foot {
+            @include distance-dpr(padding, 34px, y);
+            @include distance-dpr(padding, 164px, x);
+            .icon {
+                display: inline-block;
+                @include px2rem(width, 32px);
+                @include px2rem(height, 26px);
+                @include px2rem(margin-right, 10px);
+                @include font-dpr(35px);
+                vertical-align: top;
+            }
+        }
+    }
+    .ml22 {
+        @include px2rem(margin-left, 22px);
+    }
+    .ml10 {
+        @include px2rem(margin-left, 10px);
+    }
+}

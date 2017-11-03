@@ -1,0 +1,40 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+.applyForLoan {
+    @include font-dpr(25px);
+    background: gainsboro;
+    .form_top,
+    .form_mid {
+        @include px2rem(margin-bottom, 20px);
+    }
+    .radio {
+        @include px2rem(width, 24px);
+        @include px2rem(height, 24px);
+        @include px2rem(margin-right, 15px);
+    }
+    #addressLink {
+        @include px2rem(height, 50px);
+        display: inline-block;
+        float: right;
+        select {
+            @include px2rem(width, 140px);
+        }
+    }
+    .pl30 {
+        background: #fff;
+        @include px2rem(padding-left, 30px);
+    }
+    .read {
+        @include px2rem(padding-top, 30px);
+        text-align: center;
+        .input-box {
+            @include px2rem(width, 25px);
+            @include px2rem(height, 25px);
+            @include px2rem(margin-right, 10px);
+        }
+        .fonts {
+            color: blue;
+            @include font-dpr(20px);
+        }
+    }
+}

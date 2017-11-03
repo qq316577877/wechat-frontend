@@ -1,0 +1,75 @@
+@import "../../scss/main.scss";
+
+#registerPage {
+  background-color:$white-bg-color;
+  height: 100%;
+  text-align: center;
+  img {
+    @include px2rem(margin-top, 100px);
+    @include px2rem(width, 400px);
+  }
+  .baseForm {
+    @include px2rem(margin-top, 80px);
+    @include px2rem(padding-left,75px);
+    @include px2rem(padding-right,75px);
+    .formline {
+       .getCapth_box{
+           display: flex;
+           justify-content: space-between;
+           @include px2rem(padding-right,20px);
+       } 
+      border: 1px solid $base-input-color;
+      #vapthVal{
+        @include px2rem(width, 320px);
+      }
+      @include px2rem(margin-top, 20px);
+      overflow: auto;
+      i {
+        float: left;
+        display: inline-block;
+        @include px2rem(width, 80px);
+        @include px2rem(height, 80px);
+        @include px2rem(line-height, 80px);
+        @include font-dpr(48px);
+        background-color: $white-bg-color;
+        color: #999;
+        &.icon-password {
+          @include font-dpr(50px);
+        }
+        &.icon-yanzhengma {
+          @include font-dpr(47px);
+        }
+      }
+      #btn-passage{
+        background: $white-bg-color;
+        color: $base-color;
+        text-decoration: underline;
+        @include font-dpr(22px);
+      }
+      input {
+        //@include px2rem(width, 600px);
+        width: 88%;
+        @include px2rem(margin-top, 0);
+        @include px2rem(height, 80px);
+        @include px2rem(margin-left, -10px);
+        @include px2rem(text-indent, 15px);
+        margin-bottom: 0;
+        border:none;
+        float: left;
+        &.diferent_input {
+          @include px2rem(width, 406px);
+        }
+      }
+      button {
+        background: $base-color;
+        display: inline-block;
+        @include px2rem(line-height, 80px);
+        @include font-dpr(30px);
+        color: white;
+      }
+    }
+  }
+  #address_save1{
+    @include px2rem(margin-top, 40px);
+  }
+}

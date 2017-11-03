@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+.product_ul{
+  li{
+    position: relative;
+    border-bottom: 1px solid $form-border-weight-color;
+    @include px2rem(padding, 20px);
+    @include px2rem(height, 110px);
+  }
+  img{
+    @include px2rem(width, 150px);
+    @include px2rem(height, 150px);
+    @include border-radius-dpr(10px);
+  }
+  .info_div{
+    position: absolute;
+    @include px2rem(left, 30px);
+    @include px2rem(top, 20px);
+    h5{
+      @include font-dpr(34px);
+    }
+    p{
+      @include font-dpr(26px);
+      @include px2rem(margin-top, 10px);
+    }
+  }
+  .operate_div{
+    position: absolute;
+    @include px2rem(right, 20px);
+    @include px2rem(bottom, 40px);
+
+    span{
+      float:right;
+      @include font-dpr(45px);
+      text-align: center;
+      display: inline-block;
+      @include px2rem(width, 60px);
+      @include px2rem(height, 60px);
+      @include px2rem(line-height, 52px);
+      color:$base-font-color;
+      border: 1px solid $base-font-light-black-color;
+      background-color: $base-font-light-black-color;
+    }
+    input{
+      float:right;
+      @include px2rem(width, 90px);
+      @include px2rem(height, 60px);
+      @include px2rem(line-height, 60px);
+      text-align: center;
+      @include font-dpr($base-font-size);
+      //@include px2rem(width, 140px);
+      border: 1px solid $base-font-lightblack-color;
+    }
+  }
+}

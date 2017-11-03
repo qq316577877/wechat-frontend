@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  @include px2rem(padding-top, 100px);
+}
+.mask_content {
+  width: 70%;
+  @include px2rem(padding-bottom, 80px);
+  background: #fff;
+  margin: 0 auto;
+  .title {
+    text-align: center;
+    @include font-dpr(34px);
+    background: #00aa5c;
+    color: #fff;
+    @include distance-dpr(padding, 23px, y);
+  }
+  .baseForm {
+    @include px2rem(padding-top, 50px);
+    @include px2rem(padding-left, 40px);
+    @include px2rem(padding-right, 40px);
+    .userTel {
+      text-align: center;
+      @include font-dpr(40px);
+      @include px2rem(margin-bottom, 50px);
+      color: #009148;
+      font-weight: 500;
+    }
+    .formline {
+      border-bottom: 1px solid $base-input-color;
+      @include px2rem(margin-bottom, 50px);
+      @include distance-dpr(padding, 25px, x);
+      #vapthVal {
+        @include px2rem(width, 220px);
+      }
+      #btn-passage {
+        display: inline-block;
+        background: $white-bg-color;
+        color: $base-color;
+        text-decoration: underline;
+        @include px2rem(line-height, 80px);
+        @include px2rem(margin-left, 50px);
+        @include font-dpr(22px);
+      }
+      .diferent_input {
+        margin-bottom: 0;
+        border: none;
+      }
+    }
+    .notify {
+      @include font-dpr(26px);
+      color: #999;
+      @include px2rem(line-height, 38px);
+      @include px2rem(margin-bottom, 100px);
+      @include px2rem(letter-spacing, 5px);
+    }
+  }
+}

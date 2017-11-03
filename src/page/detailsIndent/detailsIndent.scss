@@ -1,0 +1,211 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#detailsIndent {
+    -webkit-overflow-scrolling: touch;
+    @include font-dpr(30px);
+    color: #555;
+    box-sizing: border-box;
+    .title {
+        text-align: center;
+        background: -webkit-linear-gradient(left, #00c662, #02994d);
+        color: #fff;
+        @include font-dpr(36px);
+        @include distance-dpr(padding, 45px, y);
+        border-bottom: 2px solid #f0f0f0;
+    }
+    .container {
+        @include px2rem(padding-bottom, 200px);
+        .container_top {
+            @include distance-dpr(padding, 30px, x);
+            @include distance-dpr(padding, 30px, x);
+            @include px2rem(padding-top, 35px);
+            .fund {
+                @include px2rem(padding-bottom, 20px);
+                border-bottom: 1px solid #ccc;
+            }
+            .interest {
+                @include font-dpr(26px);
+                color: #cfcfcf;
+            }
+            .loanAmount {
+                @include font-dpr(25px);
+                border: 1px solid #ccc;
+                @include distance-dpr(padding, 10px, x);
+                @include px2rem(width, 300px);
+                @include px2rem(height, 60px);
+                vertical-align: middle;
+            }
+            .checkbox_box {
+                 @include distance-dpr(padding, 25px, y);
+                .needLoan{
+                    @include font-dpr(33px);
+                    vertical-align:middle;
+                }
+                .icon-wodetubiao-19{
+                    color: #009148;
+                }
+                .checkbox_hint {
+                    @include font-dpr(27px);
+                    font-weight: 400;
+                    @include px2rem(padding-left, 15px);
+                    vertical-align: middle;
+                }
+            }
+        }
+        .container_mid {
+            @include distance-dpr(padding, 30px, x);
+            @include distance-dpr(padding, 35px, y);
+            .time_box{
+                @include px2rem(padding-top, 16px);
+                @include px2rem(padding-bottom, 9px);
+            }
+            .time {
+                @include distance-dpr(padding, 50px, x);
+                @include font-dpr(27px);
+                font-weight: 400;
+            }
+        }
+        .container_bottom {
+            @include distance-dpr(padding, 30px, x);
+            @include px2rem(padding-top, 35px);
+            .varietyName {
+                @include border-radius-dpr(5px);
+            }
+            .containerNum {
+                @include px2rem(width, 75px);
+                text-align: center;
+            }
+        }
+        .line_item {
+            .typeBtn {
+                display: inline-block;
+                background: #fff;
+                color: #555;
+                border: 1px solid #000;
+                @include distance-dpr(padding, 10px, y);
+                @include distance-dpr(padding, 30px, x);
+                @include font-dpr(25px);
+                @include border-radius-dpr(5px);
+                @include px2rem(margin-right, 30px);
+            }
+            .active {
+                border: 1px solid orange;
+            }
+        }
+        .commodity_class_list {
+            border: 1px solid #555;
+            @include border-radius-dpr(5px);
+            @include distance-dpr(padding, 20px, x);
+            @include distance-dpr(padding, 10px, y);
+            @include distance-dpr(margin, 10px, y);
+        }
+        .commodity_grade_list {
+            display: flex;
+            justify-content: space-between;
+            @include distance-dpr(padding, 13px, y);
+            border-bottom: 1px solid #ccc;
+        }
+    }
+    .detailsIndent_foot {
+        background: #fff;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid #ccc;
+        @include distance-dpr(padding, 25px, y);
+        .total {
+            @include distance-dpr(padding, 50px, y);
+            border-top: 1px solid #555;
+            border-bottom: 1px solid #555;
+        }
+        button,
+        .applylink {
+            display: inline-block;
+            @include distance-dpr(padding, 15px, y);
+            @include distance-dpr(padding, 33px, x);
+            @include font-dpr(30px);
+            background: #fff;
+            border: 1px solid #009148;
+            color: #009148;
+            font-weight: 500;
+            @include border-radius-dpr(5px);
+        }
+        .submit {
+            @include px2rem(margin-left, 50px);
+        }
+    }
+    //公共部分
+    .flex_box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    input[type=checkbox] {
+        @include px2rem(width, 30px);
+        @include px2rem(height, 30px);
+        vertical-align: middle;
+        @include border-radius-dpr(5px);
+    }
+    .tit {
+        font-weight: 400;
+        @include px2rem(margin-bottom, 25px);
+        @include font-dpr(34px);
+    }
+    .loanLimit{
+        font-weight: 400;
+        vertical-align: middle;
+        @include font-dpr(34px);
+    }
+    .read {
+        @include distance-dpr(padding, 10px, y);
+        @include distance-dpr(padding, 10px, x);
+        //      display: flex;
+        //      justify-content: center;
+        .input_box{
+            @include px2rem(width, 22px);
+            @include px2rem(height, 22px);
+        }
+        .read_hint {
+            @include font-dpr(20px);
+            vertical-align: middle;
+           .purchasing{
+                @include font-dpr(20px);
+                color: blue;
+                background: #fff;
+            }
+        }
+    }
+    .excessive {
+        @include px2rem(height, 30px);
+        background: #f0f0f0;
+    }
+    .Container_Status {
+        @include distance-dpr(padding, 10px, y);
+        border-bottom: 1px solid #ccc;
+        font-weight: 400;
+    }
+    .summation_box {
+        @include distance-dpr(padding, 20px, y);
+    }
+    .summation {
+        text-align: right;
+        font-weight: 400;
+    }
+    .mb30 {
+        @include px2rem(margin-bottom, 30px);
+    }
+    .mb10 {
+        @include px2rem(margin-bottom, 10px);
+    }
+    .mb50 {
+        @include px2rem(margin-bottom, 50px);
+    }
+    .mark-g {
+        color: #009148;
+    }
+    .mark-r {
+        color: #e60012;
+    }
+}

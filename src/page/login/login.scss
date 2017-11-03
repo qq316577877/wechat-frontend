@@ -1,0 +1,49 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+
+#loginPage{
+  height:100%;
+  text-align: center;
+  img{
+    @include px2rem(margin-top, 100px);
+    @include px2rem(width, 400px);
+  }
+  .baseForm{
+    @include px2rem(margin-top, 100px);
+    .formline{
+      position: relative;
+      i{
+        position: absolute;
+        @include px2rem(left, 82px);
+        @include font-dpr(50px);
+        @include px2rem(top, 18px);
+        color:#999;
+      }
+      .password{
+        @include font-dpr(46px);
+        @include px2rem(margin-left, 5px);
+      }
+      //.icon-wodetubiao-18{
+      //  @include font-dpr(46px);
+      //}
+      input{
+        @include px2rem(padding-left, 30px);
+        @include px2rem(width, 560px);
+      }
+    }
+  }
+  .baseButton{
+    @include px2rem(margin-top, 40px);
+  }
+  .link{
+    @include font-dpr(26px);
+    @include px2rem(margin-top, 25px);
+    .greenlink{
+      color:$base-font-color;
+    }
+    .graylink{
+      color:$base-font-gray-color;
+    }
+  }
+}
+

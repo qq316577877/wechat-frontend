@@ -1,0 +1,45 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#addAddress_page {
+    .mint-switch-input:checked+.mint-switch-core {
+        border-color: #009148;
+        background-color: #009148;
+    }
+    .mint-switch-core {
+        display: inline-block;
+        position: relative;
+        @include px2rem(width, 52px);
+        @include px2rem(height, 32px);
+        border: 1px solid #d9d9d9;
+        @include border-radius-dpr(16px);
+        box-sizing: border-box;
+        background: #d9d9d9;
+    }
+    .mint-switch-core:before {
+        @include px2rem(width, 50px);
+        @include px2rem(height, 30px);
+        background-color: #fdfdfd;
+    }
+    .mint-switch-core:after {
+        @include px2rem(width, 30px);
+        @include px2rem(height, 30px);
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    }
+    .mint-switch-core:after,
+    .mint-switch-core:before {
+        content: " ";
+        top: 0;
+        left: 0;
+        position: absolute;
+        -webkit-transition: -webkit-transform .3s;
+        transition: -webkit-transform .3s;
+        transition: transform .3s;
+        transition: transform .3s, -webkit-transform .3s;
+        @include border-radius-dpr(15px);
+    }
+    .mint-switch-input:checked+.mint-switch-core:after {
+        -webkit-transform: translateX(0.266666rem);
+        transform: translateX(0.266666rem);
+    }
+}

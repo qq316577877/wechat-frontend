@@ -1,0 +1,78 @@
+/*  @import "../scss/mixin.scss";
+    .el-tabs__item.is-active{
+        color:#F5294C;
+    }
+    .el-tabs__active-bar{
+        background-color:#F5294C;
+    }
+    .el-tabs__nav{
+        width: 100%;*//*
+        @include px2rem(width,10rem);
+        padding: 0.3rem 0px;
+    }
+    .el-tabs__item{
+        width:33.33%;
+        @include font-dpr(25px);
+        text-align: center;
+    }
+    #introImg{
+        @include px2rem(width,10rem)
+        @include px2rem(height,5rem)
+    }
+    .proTitle{
+        @include font-dpr(30px);
+        font-weight: bold;
+        padding: 0.3rem 0.4rem;
+    }
+    .feature{
+        background: #ffe6fb;
+        padding:0.3rem 0rem ;
+    }
+    .feature p{
+        color:#F5294C;
+        padding:0rem 0.35rem;
+        margin: 0rem;
+        @include font-dpr(30px);
+    }
+    .feature ul{
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        @include clearfix();
+    }
+    .feature ul li{
+        @include font-dpr(20px);
+        float: left;
+        text-align: center;
+        @include px2rem(width,2.5rem);
+        padding:0.3rem 0rem ;
+    }
+    .content{
+        padding: 0.3rem 0.4rem;
+        @include font-dpr(30px);
+        background: #ffe6fb;
+    }
+    .content p{
+        color:#F5294C;
+        margin: 0rem;
+        @include font-dpr(30px);
+    }
+    .detailInfo{
+       @extend .content
+    }
+    .evalue{
+        padding: 0.3rem 0.4rem;
+
+    }
+    .evalue div:nth-of-type(1){
+        @include clearfix();
+        color:#F5294C ;
+        @include font-dpr(30px);
+    }
+    .evalue div:nth-of-type(1) span:nth-of-type(1){
+        float: left;
+    }
+    .evalue div:nth-of-type(1) span:nth-of-type(2){
+        float: right;
+
+    }*/

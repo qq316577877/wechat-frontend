@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#personalInfoList div.active {
+    color: $base-color;
+    border-bottom: 5px solid $base-color;
+    position:relative;
+    &:before {
+        content: '';
+        position: absolute;
+        @include px2rem(border-width, 24px);
+        border-color: transparent;
+        border-style: solid;
+        border-bottom-color: $base-font-color;
+        @include px2rem(left, 168px);
+        @include px2rem(bottom, -1px);
+    }
+}
+
+#personalInfoList {
+    @include px2rem(padding, 0);
+    @include px2rem(margin-top, 20px);
+    #headerHeight {
+        @include px2rem(height, 80px);
+    }
+    .clear {
+        clear: both;
+    }
+    #header {
+        text-align: center;
+        @include px2rem(margin-bottom, 20px);
+        @include font-dpr(40px);
+    }
+    .label {
+        @include px2rem(margin-left, 30px);
+    }
+    .vipType {
+        width: 50%;
+        margin: 0;
+        float: left;
+        display: inline-block;
+        text-align: center;
+        @include font-dpr(36px);
+        @include px2rem(height, 80px);
+        font-weight: 500;
+        border-bottom:5px solid #eee;
+    }
+    .capthHeader {
+        float: left;
+    }
+    .getCapth_box{
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+    }
+    #capth {
+        @include px2rem(margin-top, 0);
+        @include px2rem(width, 250px);
+    }
+    #getCapth {
+        @include px2rem(margin-left, 10px);
+        color: $base-color;
+        text-decoration: underline;
+        background: #fff;
+        display: inline-block;
+        @include font-dpr(28px);
+    }
+}

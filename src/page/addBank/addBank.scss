@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@import "../.././scss/main.scss";
+
+
+#bankName{
+  float: right;
+  @include px2rem(height, 60px);
+  @include px2rem(width, 300px);
+  @include px2rem(margin-top, 25px);
+  @include font-dpr(35px);
+  border: none;
+}

@@ -1,0 +1,35 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+.signatureTel {
+    height: 100%;
+    @include font-dpr(25px);
+    h3 {
+        @include px2rem(height, 100px);
+        @include px2rem(line-height, 100px);
+        text-align: center;
+        @include font-dpr(34px);
+    }
+    .canvasBox {
+        text-align: center;
+    }
+    #signName {
+        border: 1px solid gainsboro;
+    }
+    .uploadButonDiv {
+        position: absolute;
+        @include px2rem(bottom, 10px);
+        width: 100%;
+        text-align: center;
+        button {
+            @include px2rem(width, 200px);
+        }
+    }
+    .btn_box {
+        position: absolute;
+        @include px2rem(bottom, 10px);
+        @include px2rem(width, 750px);
+        text-align: center;
+        @include distance-dpr(padding, 20px, y);
+        @include px2rem(padding-right, 30px);
+    }
+}

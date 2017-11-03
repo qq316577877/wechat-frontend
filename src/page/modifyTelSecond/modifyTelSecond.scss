@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+
+#modifyTelPageTwoPage {
+  #btn-passage {
+    width: 30%;
+    @include px2rem(height, $base-btn-height);
+    //@include px2rem(margin-left, 30px);
+    @include font-dpr(22px);
+    text-decoration: underline;
+    color:$base-color;
+    border: 1px solid #e7e7e7;
+    float: left;
+    border-left:none;
+    background: #fff
+  }
+  #capth {
+    width: 70%;
+    float: left;
+    border: 1px solid #e7e7e7;
+    border-right:none;
+    margin-top: 0;
+  }
+
+}
+

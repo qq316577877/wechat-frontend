@@ -1,0 +1,91 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+
+#enterpriseInfoList{
+  @include px2rem(padding,20px);
+  input[type="radio"]{
+    @include px2rem(width,20px);
+    @include px2rem(height,20px);
+  }
+  #header{
+    margin: 0;
+    @include font-dpr(36px);
+    font-weight: normal;
+    @include px2rem(margin-bottom,20px);
+  }
+  form label{
+    width: 100%;
+    display: block;
+    @include px2rem(height,$base-btn-height);
+    @include px2rem(margin-bottom,20px);
+    @include px2rem(line-height,$base-btn-height);
+    input[type="text"]{
+      width: 100%;
+      @include px2rem(height,$base-btn-height);
+      @include px2rem(padding-left,10px);
+      border: 1px solid #666;
+      @include font-dpr(30px);
+    }
+
+  }
+  .selectList{
+    @include px2rem(margin-bottom,20px);
+    select{
+      width: 22%;
+      @include px2rem(height,$base-btn-height);
+      @include px2rem(margin-right,21px);
+      @include font-dpr(30px);
+
+    }
+  }
+  .selectList select:nth-of-type(4){
+    margin-right: 0;
+  }
+  .input-l{
+    //@include px2rem(width,128px);
+    text-align: left;
+    display: inline-block;
+    //line-height: 52px;
+    @include font-dpr($base-font-size);
+    float: left;
+  }
+  .memEntBOX{
+    display: inline-block;
+    float: left;
+    @include font-dpr($base-font-size);
+    @include px2rem(margin-right,20px);
+  }
+  .uploader{
+    .uploader_img{
+
+      width: 60%;
+      .uploader_list{
+        @include px2rem(margin-top,20px);
+        width: 40%;
+        display: inline-block;
+        @include px2rem(margin-left,20px);
+        @include px2rem(margin-bottom,20px);
+        border: 1px solid #666;
+        @include px2rem(height,160px);
+        .uploaderClick{
+          @include font-dpr(120px);
+          font-weight: normal;
+          text-align: center;
+          @include px2rem(line-height,160px);
+          text-align: center;
+          display: block;
+        }
+      }
+    }
+  }
+
+  #sub{
+    @include px2rem(width,$base-btn-width);
+    @include px2rem(height,$base-btn-height);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    background: $base-color;
+    @include font-dpr($base-font-size);
+  }
+}

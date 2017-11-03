@@ -1,0 +1,90 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#supplierList {
+    //height: auto!important;
+    height: 100%;
+    background-color: $page-bg-color;
+    #supplierList_ul {
+        @include px2rem(padding-bottom, 120px);
+        li {
+            background-color: white;
+            margin-bottom: 20px;
+            .supplierListInfo {
+                @include px2rem(padding, 30px);
+                padding-bottom: 0;
+                h3 {
+                    @include font-dpr(34px);
+                    color: $base-header-color;
+                    display: block;
+                    @include px2rem(margin-bottom, 20px);
+                }
+                .content {
+                    display: flex;
+                    justify-content: space-between;
+                    p {
+                        color: $product-time-color;
+                        overflow: hidden;
+                    }
+                    .supplierFocus {
+                        color: $base-header-color;
+                        @include font-dpr(32px);
+                        font-weight: 500;
+                    }
+                    .hid_two{
+                        @include px2rem(width, 352px);
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        
+                    }
+                }
+                .supplierAddress {
+                    @include distance-dpr(margin, 10px, y);
+                    @include font-dpr(26px);
+                    color: #999;
+                }
+            }
+            .operate {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                border-top: 1px solid $form-border-color;
+                @include px2rem(padding-top, 20px);
+                @include px2rem(padding-bottom, 20px);
+                @include px2rem(padding-right, 30px);
+                @include font-dpr(26px);
+                color: #999;
+                a:focus,
+                a:link,
+                a:visited,
+                a:active {
+                    color: #999;
+                    @include font-dpr(26px);
+                }
+                .iconfont {
+                    @include font-dpr(38px);
+                    vertical-align: middle;
+                }
+                .deleteBtn {
+                    text-align: center;
+                    @include px2rem(margin-left, 40px);
+                    @include px2rem(margin-top, 4px);
+                }
+            }
+        }
+    }
+    #createSupplyBtn {
+        position: fixed;
+        @include px2rem(bottom, 20px);
+        @include px2rem(left, 30px);
+        .iconfont {
+            @include font-dpr(30px);
+            @include px2rem(margin-right, 20px);
+        }
+    }
+    //.baseButton {
+    //  height: 10%;
+    //}
+}

@@ -1,0 +1,148 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+.detailsList {
+    @include font-dpr(25px);
+    box-sizing: border-box;
+    .createType {
+        display: flex;
+        @include px2rem(height, 100px);
+        @include px2rem(line-height, 100px);
+        button {
+            background-color: white;
+            flex: 1;
+            text-align: center;
+            color: $base-font-black-weight-color;
+            @include px2rem(border-bottom-width, 5px);
+            border-bottom-color: $base-background-color;
+            border-bottom-style: solid;
+            @include font-dpr(30px);
+            font-weight: 500;
+            &.active {
+                color: $base-font-color;
+                @include px2rem(border-bottom-width, 5px);
+                border-bottom-color: $base-font-color;
+                border-bottom-style: solid;
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    border: 20px solid transparent;
+                    @include px2rem(border-width, 20px);
+                    border-bottom-color: $base-font-color;
+                    @include px2rem(left, 168px);
+                    @include px2rem(bottom, -1px);
+                }
+            }
+        }
+    }
+    .list_content {
+        @include distance-dpr(padding, 40px, x);
+        @include px2rem(padding-bottom, 80px);
+        .ulList{
+           height: 1300px;
+         -webkit-overflow-scrolling: touch;
+//          overflow: scroll;
+            @include px2rem(padding-bottom, 280px);
+        }
+        li {
+            @include distance-dpr(padding, 25px, y);
+            border-bottom: 1px solid #ccc;
+            display: flex;
+            justify-content: space-between;
+            @include font-dpr(25px);
+            .list_left {
+                @include px2rem(width, 200px);
+            }
+            .list_mid {
+                width: 1px;
+                display: flex;
+                align-items: flex-end;
+            }
+            .list_right {
+                @include px2rem(width, 280px);
+                text-align: right;
+                word-break: keep-all;
+                /* 不换行 */
+                white-space: nowrap;
+                /* 不换行 */
+                overflow: inherit;
+            }
+        }
+    }
+    .indent_list {
+        .status_btn {
+            @include distance-dpr(padding, 20px, y);
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #ccc;
+            .status_btn_type {
+                @include distance-dpr(padding, 32px, x);
+                @include distance-dpr(padding, 15px, y);
+                @include font-dpr(27px);
+                color: #999;
+                background: #fff9ef;
+                border: 1px solid #ffb135;
+                @include border-radius-dpr(10px);
+                &.active {
+                    color: #fff;
+                    background: #ffb135;
+                }
+            }
+        }
+        .statusDesc {
+            color: #ffb135;
+            display: inline-block;
+        }
+        .Jump_arrow {
+            display: inline-block;
+            @include font-dpr(30px);
+            font-weight: 900;
+            color: #ffb135;
+            vertical-align: middle;
+        }
+    }
+    .container_list {
+        .container_head {
+            @include px2rem(line-height, 40px);
+            @include distance-dpr(padding, 20px, y);
+        }
+        .status_btn {
+            @include distance-dpr(padding, 20px, y);
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid #ccc;
+            .status_btn_type {
+                @include distance-dpr(padding, 32px, x);
+                @include distance-dpr(padding, 15px, y);
+                @include font-dpr(27px);
+                color: #999;
+                background: #f2f9ff;
+                border: 1px solid #56b7fa;
+                @include border-radius-dpr(10px);
+                &.active {
+                    color: #fff;
+                    background: #56b7fa;
+                }
+            }
+        }
+        .statusDesc {
+            color: #56b7fa;
+            display: inline-block;
+        }
+        .Jump_arrow {
+            display: inline-block;
+            @include font-dpr(30px);
+            font-weight: 900;
+            color: #56b7fa;
+            vertical-align: middle;
+        }
+    }
+    //通用部分
+    .fontw {
+        font-weight: 700;
+    }
+    .mb20 {
+        display: inline-block;
+        @include px2rem(margin-bottom, 20px);
+    }
+}

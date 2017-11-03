@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+
+#modifyTelPage {
+  #capth{
+    float: left;
+    border-right: none;
+  }
+  #capth{
+    width: 72%;
+  }
+  #btn-passage{
+    width: 28%;
+    @include px2rem(height, $base-btn-height);
+    //@include px2rem(margin-left, 20px);
+    @include font-dpr(22px);
+    text-decoration: underline;
+    color: $base-color;
+    background: #fff;
+    float: left;
+    border: 1px solid #e7e7e7;
+    border-left: none;
+  }
+  input[disabled]{
+    background: #fff;
+  }
+}
+

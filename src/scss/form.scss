@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+%formcontrol{
+  //border: 1px solid  $form-border-color;
+  border: 1px solid  $form-border-color;
+  @include px2rem(margin-bottom, 30px);
+  @include font-dpr(30px);
+  @include px2rem(text-indent, 30px);
+}
+
+.baseForm{
+  h5{
+    color:$product-time-color;
+    @include font-dpr(32px);
+  }
+  .horiControl{
+    width: 100%;
+  }
+  .rightControl{
+    @include px2rem(width, 498px);
+  }
+  .phoneContry{
+    @include px2rem(width, 180px);
+  }
+  #ads_regionnum{
+    @include px2rem(width, 115px);
+  }
+  #ads_phonenum{
+    @include px2rem(width, 368px);
+  }
+  input{
+    @extend %formcontrol;
+    @include px2rem(height, $base-form-control-height);
+  }
+  select{
+    display: inline-block;
+    @include px2rem(width, 221px);
+    @extend %formcontrol;
+    @include px2rem(height, 80px);
+  }
+  textarea{
+    @extend %formcontrol;
+    @include px2rem(padding-top, 25px);
+  }
+}
+
+.baseHoriControl{
+  @include border-radius-dpr(10px);
+  @include px2rem(height, $base-form-control-height);
+  width: 100%;
+  @extend %formcontrol;
+}
+
+.funcBaseFrom{
+  @include font-dpr(35px);
+  .formlinelabel{
+    background-color: white;
+    @include px2rem(padding-left, 30px);
+    @include px2rem(padding-right, 30px);
+    @include px2rem(height, 100px);
+    @include px2rem(line-height, 100px);
+    border-bottom: 1px solid $base-font-lightblack-color;
+    label{
+      color:$base-font-black-color;
+    }
+    input[type=text]{
+      float: right;
+      @include px2rem(margin-top, 30px);
+      @include font-dpr(35px);
+      @include px2rem(width, 400px);
+      text-align: right;
+      &::-webkit-input-placeholder{
+        color: $base-font-lightblack-color;
+      }
+    }
+    input[type=date]{
+      float: right;
+      @include font-dpr(35px);
+      @include px2rem(margin-top, 20px);
+    }
+    .mint-switch{
+      @include px2rem(margin-top, 20px);
+      display: inline-block;
+      float: right;
+    }
+    .formLineInfo{
+      float:right;
+    }
+  }
+}
+
+.modifyForm{
+  @include px2rem(padding-top, 30px);
+  @include px2rem(padding-left, 75px);
+  @include px2rem(padding-right,75px);
+  h5{
+    color: #555;
+    @include font-dpr(34px);
+    @include px2rem(margin-bottom,20px);
+  }
+  input{
+    width: 100%;
+    @include px2rem(height,$base-btn-height);
+    border: 1px solid #e7e7e7;
+    @include px2rem(padding-left, 20px);
+    @include px2rem(margin-bottom, 30px);
+    box-sizing: border-box;
+    @include font-dpr(30px);
+  }
+}
+
+.mint-switch-input:checked+.mint-switch-core {
+  border-color: $base-font-color;
+  background-color: $base-font-color;
+}
+

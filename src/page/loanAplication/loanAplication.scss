@@ -1,0 +1,108 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#loanAplication {
+    background: gainsboro;
+    color: #555;
+    height: 100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    @include font-dpr(30px);
+}
+
+#loanAplicationlst_ul {
+    @include px2rem(padding-top, 30px);
+    @include distance-dpr(padding, 30px, x);
+    li {
+        @include px2rem(margin-bottom, 20px);
+        background: #fff;
+        color: #555;
+    }
+    .content-top {
+        @include distance-dpr(padding, 20px, y);
+        @include distance-dpr(padding, 15px, x);
+        border-bottom: 1px solid #ccc;
+        .sign {
+            display: inline-block;
+            @include px2rem(width, 6px);
+            @include px2rem(height, 30px);
+            background: #00aa5c;
+            @include px2rem(margin-right, 10px);
+            vertical-align: middle;
+            border-radius: 20px;
+        }
+        .top {
+            display: inline-block;
+            font-weight: 500;
+            vertical-align: middle;
+        }
+        .containerNo {
+            font-weight: 500;
+            color: #555;
+            vertical-align: middle;
+        }
+        .addTime {
+            @include px2rem(padding-top, 10px);
+            color: #999;
+            font-weight: 400;
+        }
+    }
+    .content-foot {
+        @include px2rem(padding-left, 40px);
+        @include px2rem(padding-right, 40px);
+        @include px2rem(padding-top, 40px);
+        @include px2rem(padding-bottom, 20px);
+        .content-foot-top {
+            @include px2rem(padding-bottom, 20px);
+            border-bottom: 1px solid #999;
+            display: flex;
+            justify-content: space-between;
+        }
+        .content-foot-mid {
+            display: flex;
+            justify-content: space-between;
+            @include px2rem(padding-top, 30px);
+            .left,
+            .right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .right {
+                text-align: right;
+            }
+            .mid {
+                text-align: center;
+            }
+        }
+    }
+    .type_color {
+                @include distance-dpr(padding, 6px, y);
+                @include distance-dpr(padding, 16px, x);
+                @include font-dpr(22px);
+                border: 1px solid #56b7fa;
+                background: #eef8fe;
+                font-weight: 400;
+                color:#999;
+                @include border-radius-dpr(5px);
+            }
+    .fs {
+        @include font-dpr(26px);
+        font-weight: 400;
+        color:#999;
+    }
+    .fm {
+        font-weight: 400;
+    }
+    .ml {
+        @include px2rem(margin-left, 25px);
+    }
+    .mt5 {
+        @include px2rem(margin-top, 5px);
+    }
+    .mt20 {
+        @include px2rem(margin-top, 20px);
+    }
+    .ml22 {
+        @include px2rem(margin-left, 22px);
+    }
+}

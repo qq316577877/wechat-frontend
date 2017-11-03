@@ -1,0 +1,51 @@
+@charset "utf-8";
+@import "../../scss/main.scss";
+.home {
+    @include font-dpr(25px);
+    background: #55A532;
+    .swipe {
+        .mint-swipe {
+            height: 400px;
+            .swipe_img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    .product {
+        padding: 0.2rem 0.3rem;
+        @include clearfix();
+        li {
+            @include clearfix();
+            @include distance-dpr(margin, 20px, y);
+            img {
+                @include px2rem(width, 225px);
+                @include px2rem(height, 200px);
+                float: left;
+            }
+        }
+        .content {
+            @include px2rem(width, 6rem);
+            @include px2rem(height, 170px);
+            @include px2rem(padding, 0.2rem);
+            float: left;
+            background: white;          
+            h4 {
+                @include font-dpr(30px);
+                margin-bottom: 15px;
+            }
+            p {
+                margin-bottom: 15px;
+                &:nth-of-type(3) {
+                    color: #F5294C;
+                }
+            }
+            .details {
+                @include font-dpr(20px);
+            }
+            .a {
+                color: #000;
+            }
+        }
+    }
+}

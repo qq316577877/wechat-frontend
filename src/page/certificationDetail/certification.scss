@@ -1,0 +1,69 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#certificationPage {
+    @include font-dpr(30px);
+    @include distance-dpr(padding, 30px, x);
+    @include px2rem(padding-top, 20px);
+    background: $base-background-color;
+    box-sizing: border-box;
+    .enterpriseInfo {
+        @include px2rem(margin-top, 23px);
+        .img {
+            border-bottom: 1px solid #ccc;
+            @include px2rem(padding-left, 23px);
+            @include px2rem(padding-right, 28px);
+            .hint {
+                color: #999;
+                @include px2rem(padding-top, 17px);
+                @include px2rem(padding-bottom, 24px);
+            }
+            .img_box {
+                display: flex;
+                justify-content: space-between;
+                @include px2rem(margin-bottom, 16px);
+                img {
+                    @include px2rem(width, 300px);
+                    @include px2rem(height, 172px);
+                }
+            }
+        }
+    }
+    .box {
+        background: #fff;
+        border: 1px solid #ccc;
+        h6 {
+            @include px2rem(height, 80px);
+            @include px2rem(line-height, 80px);
+            text-align: center;
+            @include font-dpr(36px);
+            font-weight: 500;
+            color: #fff;
+            background: #009148;
+            @include px2rem(margin-bottom, 10px);
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            @include distance-dpr(padding, 15px, y);
+            @include distance-dpr(padding, 25px, x);
+            border-bottom: 1px solid #ccc;
+            color: #999;
+            i {
+                color: #555;
+            }
+        }
+        .approve {
+            @include distance-dpr(padding, 24px, y);
+            text-align: center;
+            @include font-dpr(34px);
+            font-weight: 500;
+            color: #009148;
+            vertical-align: middle;
+            i {
+                @include font-dpr(40px);
+                vertical-align: middle;
+                @include px2rem(margin-right, 17px);
+            }
+        }
+    }
+}

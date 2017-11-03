@@ -1,0 +1,16 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+
+#aboutUsPage {
+  @include font-dpr(30px);
+  @include px2rem(padding, 80px);
+  box-sizing: border-box;
+  padding-right: 0;
+  h5{
+    @include font-dpr(36px);
+    @include px2rem(margin-bottom, 30px);
+  }
+  p{
+    @include px2rem(margin-bottom, 20px);
+  }
+}

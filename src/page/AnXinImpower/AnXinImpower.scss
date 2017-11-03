@@ -1,0 +1,67 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#AnXinImpower {
+    height: 100%;
+    background: #f0f0f0;
+    box-sizing: border-box;
+    @include px2rem(padding-top, 24px);
+    @include distance-dpr(padding, 30px, x);
+    @include font-dpr(26px);
+    .content {
+        background: #fff;
+        border:1px solid #ccc;
+        .content_top {
+            @include distance-dpr(padding, 30px, x);
+            @include distance-dpr(padding, 48px, y);
+            border-bottom:1px solid #ccc;
+        }
+        h1 {
+            @include font-dpr(30px);
+            font-weight: 600;
+            @include px2rem(margin-bottom, 32px);
+        }
+        p {
+            color: #555;
+            @include px2rem(line-height,45px);
+        }
+        .mark-g {
+            color: #009148;
+        }
+        .content_foot{
+            display: flex;
+            justify-content: space-between;
+            @include distance-dpr(padding, 30px, x);
+            @include distance-dpr(padding, 24px, y);
+            @include font-dpr(20px);
+        }
+        .foot-l{
+            @include px2rem(width, 190px);
+        }
+        .read_agreement{
+            @include px2rem(width, 22px);
+            @include px2rem(height, 22px);
+            @include px2rem(margin-right, 16px);
+            vertical-align: middle;
+        }
+        .read_font{
+            vertical-align: middle;
+        }
+        a{
+            color:#00c;
+            vertical-align: middle;
+        }
+    }
+    .pagechange {
+        text-align: center;
+        button {
+            @include px2rem(height, 70px);
+            @include font-dpr(30px);
+        }
+    }
+    .baseButton {
+        .greenBtn {
+            @include px2rem(margin-top, 24px);
+            @include px2rem(width, 690px);
+        }
+    }
+}

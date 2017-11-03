@@ -1,0 +1,24 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+
+#securityPage {
+  //box-sizing: border-box;
+  background-color: #EEEEEE;
+  .listSel{
+    margin-top: 0;
+    @include px2rem(height, 50px);
+    @include px2rem(line-height, 50px);
+    @include distance-dpr(margin,20px,y);
+    background: white;
+    @include distance-dpr(padding,35px,x);
+    @include distance-dpr(padding,15px,y);
+    @include font-dpr(30px);
+    a{
+      color: #666;
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+

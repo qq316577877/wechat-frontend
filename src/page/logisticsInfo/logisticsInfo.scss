@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#logisticsInfo {
+    h5 {
+        @include font-dpr(36px);
+        color: white;
+        @include px2rem(height, 130px);
+        @include px2rem(line-height, 130px);
+        text-align: center;
+        background: -webkit-linear-gradient(left, $base-green-light-color, $base-green-heavy-color);
+    }
+    ul {
+        position: relative;
+        @include px2rem(margin-top, 37px);
+        li {
+            @include font-dpr(30px);
+            @include px2rem(height, 150px);
+            @include px2rem(margin-left, 30px);
+            @include px2rem(padding-left, 80px);
+            color: $base-font-gray-color;
+            &.line {
+                @include px2rem(border-left-width, 1px);
+                border-left-style: solid;
+                border-left-color: $base-font-lightblack-color;
+                &:last-child {
+                    border: none;
+                }
+            }
+            &.active {
+                color: $base-font-color;
+                span {
+                    @include px2rem(width, 20px);
+                    @include px2rem(height, 20px);
+                    @include border-radius-dpr(40px);
+                    background-color: $base-font-color;
+                    @include px2rem(left, 22px);
+                    box-shadow: 0 0 20px #009148;
+                }
+               
+            }
+            span {
+                position: absolute;
+                @include px2rem(left, 24px);
+                display: inline-block;
+                @include px2rem(width, 15px);
+                @include px2rem(height, 15px);
+                background-color: $base-font-lightblack-color;
+                @include border-radius-dpr(30px);
+            }
+        }
+    }
+}

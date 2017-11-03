@@ -1,0 +1,2 @@
+1.this.$route.meta.keepAlive=true/false;(用于控制是否缓存页面的全局变量);
+2.如果初始授权页面uri改变,那么退出登录里的地址也要改变;

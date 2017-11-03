@@ -1,0 +1,82 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#UploadTheSeal {
+    @include px2rem(padding-top, 50px);
+    @include px2rem(padding-right, 30px);
+    @include px2rem(padding-bottom, 50px);
+    @include px2rem(padding-left, 30px);
+    @include font-dpr(25px);
+    box-sizing: border-box;
+    #header {
+        text-align: center;
+        @include px2rem(margin-bottom, 120px);
+        display: block;
+        @include font-dpr(30px);
+    }
+    h2 {
+        @include font-dpr(30px);
+    }
+    form {
+        color: #000;
+        .certificateMsg {
+            @include px2rem(margin-top, 20px);
+            @include px2rem(margin-bottom, 20px);
+        }
+        .hint {
+            @include px2rem(margin-top, 50px);
+            text-align: center;
+        }
+        .read {
+            @include px2rem(margin-top, 30px);
+            .input-box {
+                @include px2rem(width, 25px);
+                @include px2rem(height, 25px);
+                @include px2rem(margin-right, 10px);
+            }
+            .fonts {
+                color: blue;
+                @include font-dpr(20px);
+            }
+        }
+        .red {
+            color: red;
+        }
+        .agreement {
+            @include px2rem(margin-top, 40px);
+            @include px2rem(margin-bottom, 60px);
+            text-align: center;
+        }
+    }
+    .btn_box {
+        text-align: center;
+        .sub {
+            @include px2rem(width, 400px);
+            @include px2rem(height, 70px);
+            color: #fff;
+            @include font-dpr(30px);
+            background: #FF9800;
+            border-radius: 5px;
+        }
+    }
+    .uploader {
+        @include px2rem(width, 250px);
+        @include px2rem(height, 250px);
+        margin:0 auto;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .g-core-image-upload-btn {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        .g-core-image-upload-form {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    }
+}

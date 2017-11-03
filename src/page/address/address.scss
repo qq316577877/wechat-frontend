@@ -1,0 +1,175 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#addressList {
+    height: 100%;
+    background: #eee;
+    color: #555;
+    @include font-dpr(30px);
+    .fl {
+        float: left;
+        margin-left: 0!important;
+    }
+    .fr {
+        float: right;
+        margin-left: 0!important;
+    }
+    .showTel {
+        @include px2rem(margin-right, 30px);
+    }
+    .clear {
+        clear: both;
+    }
+    #addressList_ul {
+        list-style: none;
+        padding: 0;
+        background: #eee;
+        @include px2rem(padding-bottom, 120px);
+    }
+    li {
+        @include px2rem(margin-bottom, 20px);
+        background-color: white;
+        .addressInfo {
+            @include px2rem(padding-top, 30px);
+            @include px2rem(padding-left, 30px);
+            h3 {
+                @include font-dpr(34px);
+                font-weight: 500;
+                color: $address-user-color;
+                span {
+                    @include px2rem(margin-left, 38px);
+                    color: $product-time-color;
+                }
+            }
+            p {
+                @include px2rem(margin-top, 13px);
+                @include px2rem(margin-bottom, 30px);
+                font-weight: 500;
+            }
+        }
+        .operate {
+            @include px2rem(margin-left, 30px);
+            @include px2rem(padding-top, 20px);
+            @include px2rem(padding-bottom, 30px);
+            border-top: 1px solid #CBCBCB;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            @include font-dpr(26px);
+            color: #999;
+            .ico {
+                @include font-dpr(36px);
+                @include px2rem(margin-right, 20px);
+                vertical-align: middle;
+            }
+            .selectedColor {
+                color: #e60012!important;
+            }
+            .default {
+                @include px2rem(margin-left, 30px);
+                @include font-dpr(26px);
+                color: #999;
+            }
+            .defaultRdo {
+                @include px2rem(width, 36px);
+                @include px2rem(height, 36px);
+                vertical-align: middle;
+            }
+            .operate_edit {
+                @include font-dpr(26px);
+                color: #999;
+                div {
+                    float: left;
+                }
+                float: right;
+                @include px2rem(margin-right, 30px);
+                span:last-child {
+                }
+                .editId {
+                    @include px2rem(margin-right, 40px);
+                }
+                .iconSize {
+                    @include font-dpr(40px);
+                    @include px2rem(margin-right, 13px);
+                    vertical-align: middle;
+                }
+                .deleteClass {
+                    .iconSize {
+                        @include font-dpr(40px)
+                    }
+                }
+            }
+        }
+    }
+    #createAdsBtn {
+        position: fixed;
+        @include px2rem(bottom, 20px);
+        @include px2rem(left, 30px);
+        .iconfont {
+            @include font-dpr(30px);
+            @include px2rem(margin-right, 20px);
+        }
+    }
+}
+
+#address_send_page {
+    .setDefault {
+        @include font-dpr(30px);
+        @include px2rem(margin-top, 20px);
+        background-color: white;
+        @include px2rem(padding-left, 30px);
+        @include px2rem(padding-right, 30px);
+        @include px2rem(padding-top, 10px);
+        @include px2rem(padding-bottom, 20px);
+        input {
+            @include px2rem(width, 30px);
+            @include px2rem(height, 30px);
+            @include px2rem(margin-right, 20px);
+        }
+    }
+}
+
+.addressForm {
+    background-color: $white-bg-color;
+    @include px2rem(padding, 30px);
+    @include px2rem(padding-top, 10px);
+    @include px2rem(padding-bottom, 20px);
+    h5 {
+        color: $product-time-color;
+        @include font-dpr(32px);
+    }
+    .horiControl {
+        width: 100%;
+    }
+    %formcontrol {
+        border: 1px solid $form-border-color;
+        @include px2rem(margin-top, 20px);
+        @include font-dpr(30px);
+        @include px2rem(text-indent, 30px);
+    }
+    .rightControl {
+        @include px2rem(width, 498px);
+    }
+    .phoneContry {
+        @include px2rem(width, 180px);
+    }
+    #ads_regionnum {
+        @include px2rem(width, 115px);
+    }
+    #ads_phonenum {
+        @include px2rem(width, 368px);
+    }
+    input {
+        @extend %formcontrol;
+        @include px2rem(height, 80px);
+    }
+    select {
+        display: inline-block;
+        @include px2rem(width, 221px);
+        @extend %formcontrol;
+        @include px2rem(height, 80px);
+    }
+    textarea {
+        @extend %formcontrol;
+        @include px2rem(padding-top, 25px);
+    }
+}

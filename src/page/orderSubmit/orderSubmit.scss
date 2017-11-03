@@ -1,0 +1,100 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+.orderSubmit {
+    -webkit-overflow-scrolling: touch;
+    @include font-dpr(26px);
+    color: #555;
+    background: #f0f0f0;
+    @include px2rem(padding-top, 27px);
+    @include distance-dpr(padding, 30px, x);
+    box-sizing: border-box;
+    color: #777;
+    .content {
+        background: #fff;
+        border: 1px solid #ccc;
+        .orderSubmit_header {
+            @include px2rem(padding-top, 30px);
+            @include distance-dpr(padding, 40px, x);
+        }
+        .formline {
+            .getCode_box{
+                display: flex;
+                justify-content: space-between;
+                @include px2rem(padding-right, 20px);
+            }
+            border: 1px solid #ccc;
+            @include px2rem(margin-top, 20px);
+            @include px2rem(padding-left, 26px);
+            overflow: auto;
+            #vapthVal {
+                @include px2rem(width, 300px);
+                @include px2rem(height, 80px);
+                @include px2rem(text-indent, 15px);
+                @include font-dpr(26px);
+                margin-bottom: 0;
+                border: none;
+                float: left;
+            }
+            i {
+                float: left;
+                display: inline-block;
+                @include px2rem(width, 80px);
+                @include px2rem(height, 80px);
+                @include px2rem(line-height, 80px);
+                @include font-dpr(48px);
+                background-color: $white-bg-color;
+                color: #999;
+                &.icon-yanzhengma {
+                    @include font-dpr(42px);
+                }
+                &.user {
+                    font-weight: 700;
+                    @include font-dpr(27px);
+                    color: #555;
+                }
+            }
+            #btn-passage {
+                background: $white-bg-color;
+                color: $base-color;
+                text-decoration: underline;
+                @include font-dpr(22px);
+            }
+            button {
+                background: $base-color;
+                display: inline-block;
+                @include px2rem(line-height, 80px);
+                @include font-dpr(30px);
+                color: white;
+            }
+        }
+    }
+    .title {
+        text-align: left;
+        @include px2rem(line-height, 40px);
+        @include px2rem(margin-bottom, 50px);
+    }
+    .orderSubmit_foot {
+        background: #fff;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #ccc;
+        @include px2rem(margin-top, 90px);
+        button {
+            @include distance-dpr(padding, 15px, y);
+            @include distance-dpr(padding, 50px, x);
+            @include font-dpr(28px);
+            background: #fff;
+            @include border-radius-dpr(10px);
+            @include distance-dpr(margin, 30px, y);
+        }
+        .cancel {
+            color: #999;
+            border: 1px solid #999;
+        }
+        .submit {
+            @include px2rem(margin-left, 50px);
+            border: 1px solid #009148;
+            color: #009148;
+        }
+    }
+}

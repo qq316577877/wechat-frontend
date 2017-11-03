@@ -1,0 +1,41 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#personalCreditContract {
+    @include px2rem(padding-top, 30px);
+    display: flex;
+    justify-content: center;
+    color: #000;
+    @include font-dpr(28px);
+    .box {
+        h1 {
+            text-align: center;
+            @include font-dpr(36px);
+            @include px2rem(margin-bottom,20px);
+        }
+    }
+    p {
+        @include px2rem(line-height,38px);
+        font-weight: 400;
+    }
+    .p1 {
+        text-indent: 2em;
+    }
+    .p2 {
+        text-indent: 2em;
+    }
+    .signature{
+        @include px2rem(padding-top,30px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        p{
+            @include px2rem(width,500px);
+        }
+    }
+    #time {
+        margin: 35px 0 0 70%;
+    }
+    .red {
+        color: red;
+    }
+}

@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+@import "../.././scss/main.scss";
+
+#productList {
+  .createType{
+    display: flex;
+    @include px2rem(height, 100px);
+    @include px2rem(line-height, 100px);
+    div{
+      @include font-dpr(36px);
+      background-color: white;
+      flex:1;
+      text-align: center;
+      color:$base-font-black-weight-color;
+      background-color: $base-font-light-black-color;
+      &.active{
+        background-color: $base-font-color;
+        color:white;
+      }
+    }
+  }
+  .product_ul{
+    @include px2rem(padding-bottom, 100px);
+    li{
+      .operate_div{
+        input{
+          text-align: center;
+        }
+      }
+    }
+  }
+  input[type="search"]{
+    @include px2rem(padding-left, 20px);
+    @include font-dpr($base-font-size);
+    @include px2rem(width, $base-form-control-width);
+    @include px2rem(margin-left, 25px);
+  }
+  #totalBuy{
+    position: fixed;
+    @include px2rem(bottom, 0px);
+    width: 100%;
+    background-color: white;
+    @include px2rem(height, 100px);
+    @include px2rem(line-height, 100px);
+    border-top: 1px solid $base-font-lightblack-color;
+    @include font-dpr(30px);
+    i{
+      @include px2rem(margin-left, 20px);
+      color:#e60012;
+      @include font-dpr(40px);
+    }
+    .greenPrice{
+      color:#e60012;
+    }
+    .totalprice{
+      @include px2rem(margin-left,20px);
+    }
+    button{
+      @include font-dpr(32px);
+      color:white;
+      float: right;
+      height: 100%;
+      @include px2rem(width, 285px);
+      background: -webkit-linear-gradient(left,$base-green-light-color, $base-green-heavy-color);
+    }
+  }
+}

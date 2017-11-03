@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+
+#findPwdPage {
+  #vapthVal{
+    width: 70%;
+    border-right:none;
+    float: left;
+  }
+  #btn-passage{
+    @include px2rem(height, $base-form-control-height);
+    width: 30%;
+    border: 1px solid #e7e7e7;
+    border-left: none;
+    float: left;
+    background: #fff;
+    color:$base-color;
+    @include font-dpr(22px);
+    text-decoration: underline;
+  }
+}

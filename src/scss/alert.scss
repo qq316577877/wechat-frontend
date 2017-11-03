@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+.mint-toast.is-placemiddle{
+  padding: 0.26667rem !important;
+ // @include px2rem(padding, 20px);
+}
+
+.mint-toast-text{
+  @include font-dpr(30px);
+}
+
+
+
+.mint-indicator-wrapper{
+  padding: 0.2rem !important;
+  @include px2rem(width, 100px);
+  @include px2rem(height, 100px);
+  .mint-indicator-spin{
+    @include px2rem(width, 100px);
+    @include px2rem(height, 100px);
+  }
+  .mint-spinner-snake{
+    width:0.8rem !important;
+    height:0.8rem !important;
+  }
+}
+
+.mint-msgbox-wrapper{
+  .mint-msgbox{
+    @include font-dpr(30px);
+    height: auto;
+    @include px2rem(min-height, 250px);
+    .mint-msgbox-header{
+      @include px2rem(height, 80px);
+      @include px2rem(line-height, 80px);
+    }
+    .mint-msgbox-title{
+      @include font-dpr(30px);
+      @include px2rem(margin-bottom, 20px);
+    }
+    .mint-msgbox-header{
+      //@include px2rem(margin-bottom, 50px);
+    }
+    .mint-msgbox-content{
+      padding: 0;
+    }
+    .mint-msgbox-message{
+//    text-align: left;
+      @include px2rem(padding, 10px);
+      @include px2rem(margin-bottom, 30px);
+      word-wrap:break-word
+    }
+    .mint-msgbox-btns{
+      @include px2rem(height, 80px);
+      button{
+        @include font-dpr(30px);
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#particularsLsit {
+    box-sizing: border-box;
+    background-color: $page-bg-color;
+    height: 100%;
+    color: #555;
+    @include font-dpr(30px);
+    h3 {
+        @include font-dpr(30px);
+        @include px2rem(padding-bottom, 10px);
+        border-bottom: 1px solid #ccc;
+    }
+    .fonts {
+        display: inline-block;
+        color: #999;
+        @include font-dpr(26px);
+        @include px2rem(min-width, 88px);
+    }
+    .fm {
+        font-weight: 500;
+        @include font-dpr(30px);
+        color: #555;
+    }
+    .fs {
+        font-weight: 400;
+        @include font-dpr(26px);
+        color: #555;
+    }
+    .interest {
+        display: inline-block;
+        @include px2rem(min-width, 100px);
+    }
+    .statusDesc {
+        @include font-dpr(22px);
+    }
+    .content {
+        @include px2rem(padding, 30px);
+        display: flex;
+        justify-content: space-between;
+        .top_content_left {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .red {
+        color: #f00;
+    }
+    .serviceList_top,
+    .serviceList_mid,
+    .serviceList_foot {
+        background: #fff;
+        @include px2rem(margin-bottom, 30px);
+        @include px2rem(padding-top, 30px);
+        @include px2rem(padding-left, 30px);
+        .tit {
+            @include font-dpr(34px);
+            font-weight: 500;
+        }
+        .top_content_right {
+            @include px2rem(width, 300px);
+        }
+        .flex_box {
+            display: flex;
+            justify-content: space-between;
+        }
+        .containerStatus {
+            @include px2rem(padding-top, 27px);
+            @include px2rem(padding-bottom, 24px);
+            @include px2rem(padding-right, 31px);
+        }
+        .number {
+            display: inline-flex;
+            align-items: center;
+            @include px2rem(width, 393px);
+            span {
+                @include px2rem(width, 247px);
+                text-align: left;
+                vertical-align: middle;
+            }
+        }
+        .time {
+            @include px2rem(margin-bottom, 48px);
+        }
+        .order {
+            @include px2rem(margin-bottom, 9px);
+        }
+    }
+    .serviceList_top,
+    .serviceList_mid {
+        span {
+            @include px2rem(width, 170px);
+            text-align: left;
+        }
+    }
+    .serviceList_foot {
+        .header {
+            @include px2rem(margin-bottom, 50px);
+        }
+        .fonts {
+            @include px2rem(min-width, 110px);
+        }
+    }
+    .ml16{
+        @include px2rem(margin-left, 16px);
+    }
+}

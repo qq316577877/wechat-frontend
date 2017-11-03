@@ -1,0 +1,136 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+#detailsContainer {
+    h5 {
+        @include font-dpr(36px);
+        color: white;
+        @include px2rem(height, 130px);
+        @include px2rem(line-height, 130px);
+        text-align: center;
+        background: -webkit-linear-gradient(left, $base-green-light-color, $base-green-heavy-color);
+        i {
+            @include px2rem(padding-right, 15px);
+            @include font-dpr(40px);
+        }
+    }
+    .funcBaseFrom {
+        h3 {
+            color: $base-font-black-color;
+            @include font-dpr(34px);
+            @include px2rem(padding-top, 30px);
+            @include px2rem(margin-left, 30px);
+        }
+        .formlinelabel {
+            @include font-dpr(30px);
+            color: $base-font-gray-color;
+            @include px2rem(height, 60px);
+            @include px2rem(line-height, 60px);
+        }
+    }
+    .main {
+        @include px2rem(margin-top, 30px);
+        @include px2rem(padding-bottom, 150px);
+        @include distance-dpr(padding, 30px, x);
+        h3 {
+            color: $base-font-black-color;
+            @include font-dpr(34px);
+        }
+        .basic {
+            background: #f0f0f0;
+            @include distance-dpr(padding, 20px, x);
+            @include distance-dpr(padding, 25px, y);
+            position: relative;
+            .stick {
+                display: block;
+                @include px2rem(width, 5px);
+                @include px2rem(height, 85px);
+                background: #009148;
+                @include border-radius-dpr(10px);
+                position: absolute;
+            }
+        }
+        .particular {
+            @include px2rem(padding-left, 40px);
+            @include px2rem(padding-right, 25px);
+            li {
+                @include px2rem(padding-bottom, 17px);
+                @include px2rem(padding-top, 23px);
+                border-bottom: 1px solid #ccc;
+            }
+        }
+        .total {
+            @include px2rem(padding-top, 20px);
+            P{
+                margin-bottom:5px;
+            }
+        }
+    }
+    .detailsContainer_foot {
+        background: #fff;
+        width: 100%;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        border-top: 1px solid #ccc;
+        @include distance-dpr(padding, 25px, y);
+        .total {
+            @include distance-dpr(padding, 50px, y);
+            border-top: 1px solid #555;
+            border-bottom: 1px solid #555;
+        }
+        button,.applylink{
+            @include distance-dpr(padding, 15px, y);
+            @include distance-dpr(padding, 33px, x);
+            @include font-dpr(30px);
+            background: #fff;
+            border: 1px solid #009148;
+            color: #009148;
+            font-weight: 500;
+            @include border-radius-dpr(10px);
+        }
+        .submit {
+            @include px2rem(margin-left, 50px);
+        }
+    }
+    //公共部分
+    .funcBaseFrom{
+        label{
+            color:#999;
+        }
+        .formLineInfo{
+            color: #555;
+            overflow:hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+        }
+    }
+    .excessive {
+        @include px2rem(height, 25px);
+        background: #f0f0f0;
+    }
+    .flex_box {
+        display: flex;
+        justify-content: space-between;
+    }
+    .top {
+        color: #555;
+        @include font-dpr(30px);
+        font-weight: 500;
+    }
+    .foot {
+        @include px2rem(margin-top, 5px);
+        color: #999;
+        @include font-dpr(30px);
+    }
+    .ml15 {
+        @include px2rem(margin-left, 15px);
+    }
+    .red {
+        color: #e60012;
+    }
+    .multiply{
+      @include font-dpr(40px);
+//    vertical-align: middle;  
+    }
+}

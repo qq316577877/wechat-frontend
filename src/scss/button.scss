@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+.baseButton {
+  text-align: center;
+  clear: both;
+  button {
+    @include px2rem(width, $base-btn-width);
+    @include border-radius-dpr(5px);
+    @include px2rem(height, $base-btn-height);
+    border: 0;
+    color: #fff;
+    @include font-dpr(30px);
+    background-color: $base-color;
+    &:active {
+      border: 0;
+      background-color: $base-light-color;
+    }
+  }
+  .ordinary {
+    @include px2rem(width, $base-btn-width);
+    @include border-radius-dpr(3px);
+    @include px2rem(height, $base-btn-height);
+    @include px2rem(margin-top, 50px);
+    border: 0;
+    color: #fff;
+    @include font-dpr(30px);
+    background-color: $base-color;
+  }
+  .fullScreenBtn {
+    @include px2rem(width, $full-screen-btn-width);
+    @include border-radius-dpr(3px);
+    @include px2rem(height, $base-btn-height);
+    @include px2rem(margin-top, 50px);
+    background: -webkit-linear-gradient(#00c662, #028845);
+  }
+  .fixedBtn {
+    position: fixed;
+    @include px2rem(bottom, $base-btn-bottom);
+    @include px2rem(left, $base-btn-left);
+  }
+  .bottomBtn {
+    position: absolute;
+    @include px2rem(bottom, $base-btn-bottom);
+    @include px2rem(left, $base-btn-left);
+  }
+  .greenBtn {
+    background-color: $base-color;
+    background: -webkit-linear-gradient(#00c662, #028845);
+    &:active {
+      border: 0;
+      background-color: $base-light-color;
+    }
+  }
+  .yellowBtn {
+    //background-color: $base-color;
+    //background-color: $base-btn-light-bgcolor;
+    background: -webkit-linear-gradient(#fdc915,#ca9b02);
+    &:active {
+      border: 0;
+      background-color: $base-btn-light-bgcolor;
+    }
+  }
+  .authBtn {
+    background-color: $base-btn-bgcolor;
+    position: fixed;
+    @include px2rem(bottom, 20px);
+    @include px2rem(left, 10px);
+    @include px2rem(margin-left, 20px);
+    &:active {
+      border: 0;
+      background-color: $base-btn-light-bgcolor;
+    }
+  }
+
+  &.addAddress {
+    position: fixed;
+    @include px2rem(bottom, 20px);
+    @include px2rem(margin-left, 85px);
+  }
+}
+
+.baseButtonModify {
+  //text-align: center;
+  clear: both;
+  @include px2rem(padding-left, 75px);
+  @include px2rem(padding-right, 75px);
+  box-sizing: border-box;
+  button {
+    @include px2rem(width, $base-btn-width);
+    @include border-radius-dpr(4px);
+    @include px2rem(height, $base-btn-height);
+    border: 0;
+    color: #fff;
+    @include font-dpr(30px);
+    background-color: $base-color;
+    &:active {
+      border: 0;
+      background-color: $base-light-color;
+    }
+  }
+  .greenBtnFull {
+    background-color: $base-color;
+    width: 100%;
+    background: -webkit-linear-gradient(#00c662, #028845);
+    &:active {
+      border: 0;
+      background-color: $base-light-color;
+    }
+  }
+  .greenBtnFullBottom {
+    background-color: $base-color;
+    width: 100%;
+    background: -webkit-linear-gradient(#00c662, #028845);
+    position: fixed;
+    bottom: 0;
+    &:active {
+      border: 0;
+      background-color: $base-light-color;
+    }
+  }
+}
+
+.bottomButton {
+  width: 100%;
+  @include border-radius-dpr(3px);
+  @include px2rem(height, $base-btn-height);
+  background-color: $base-light-color;
+  border: 0;
+  color: #fff;
+  @include font-dpr(30px);
+  position: fixed;
+  bottom: 0;
+}

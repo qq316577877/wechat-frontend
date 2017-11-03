@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+/* 如果是iphone6尺寸 */
+@mixin px2rem($property, $px, $dpr: 75px,$content:null) {
+  @if (unitless($px)) {
+    @include px2rem($property, $px + 0px, $dpr,$content:null);
+  }
+  @else if (unit($px) == rem) {
+    #{$property}: $px;
+  }
+  @else {
+    #{$property}: ($px / $dpr) * 1rem  $content ;
+  }
+}
+
+@mixin font-dpr($px) {
+  & {
+    font-size: $px * 0.5;
+  }
+
+  [data-dpr="2"] & {
+    font-size: $px;
+  }
+
+  [data-dpr="3"] & {
+    font-size: $px * 1.5;
+  }
+}
+
+@mixin border-radius-dpr($px, $direction:'all') {
+  @if($direction == 'all') {
+    @include px2rem(-webkit-border-radius, $px);
+    @include px2rem(-moz-border-radius, $px);
+    @include px2rem(border-radius, $px);
+  }
+  @else {
+    @include px2rem(-webkit-border-#{$direction}-radius, $px);
+    @include px2rem(-moz-border-#{$direction}-radius, $px);
+    @include px2rem(border-#{$direction}-radius, $px);
+  }
+}
+
+@mixin bg-img-width-full($url, $position-x:center, $position-y:top) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% auto;
+  background-size: 100% auto;
+  background-position: $position-x $position-y;
+}
+
+@mixin bg-img-width-height-full($url, $position-x:center, $position-y:top) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-position: $position-x $position-y;
+}
+
+@mixin bg-img-height-full($url, $position-x:center, $position-y:top) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  -webkit-background-size: auto 100%;
+  background-size: auto 100%;
+  background-position: $position-x $position-y;
+}
+
+@mixin distance-dpr($property, $px, $direction:x) {
+  @if($direction == x) {
+    @include px2rem(#{$property}-left, $px);
+    @include px2rem(#{$property}-right, $px);
+  }
+  @else if($direction == y) {
+    @include px2rem(#{$property}-top, $px);
+    @include px2rem(#{$property}-bottom, $px);
+  }
+}
+
+@mixin animation-toggle-shake($animateName, $fromTrans, $toTrans, $time:0.5s) {
+  @keyframes toggle-#{$animateName} {
+    from {transform: rotate($fromTrans);}
+    to {transform: rotate($toTrans);}
+  }
+
+  & {
+    -webkit-animation: toggle-#{$animateName} $time linear infinite alternate;
+    -o-animation: toggle-#{$animateName} $time linear infinite alternate;
+    animation: toggle-#{$animateName} $time linear infinite alternate;
+  }
+}
+
+@mixin square-dpr($px) {
+  @include px2rem(width, $px);
+  @include px2rem(height, $px);
+}
+
+@mixin circle-dpr($px) {
+  @include square-dpr($px);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@mixin clearfix() {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin text-overflow() {
+  & {
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+  }
+}
+
+@mixin mp-animation($name, $value) {
+  -webkit-#{$name}: $value;
+  -moz-#{$name}: $value;
+  -o-#{$name}: $value;
+  #{$name}: $value;
+}

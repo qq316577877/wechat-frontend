@@ -1,0 +1,22 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+
+#addressLink{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+//@include px2rem(padding-top, 3px);
+  select{
+    flex: 1;
+    text-align: center;
+    background:#fff;
+    @include px2rem(height, 80px);
+    color:#555;
+    @include font-dpr(30px);
+    @include px2rem(padding-left, 20px);
+  }
+  .border_none{
+      border: none;
+  }
+}
+

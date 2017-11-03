@@ -1,0 +1,161 @@
+@charset "utf-8";
+@import "../../scss/main.scss";
+.userContent {
+    width: 100%;
+    background: #EBEBEB;
+    -webkit-overflow-scrolling: touch;
+    height: 100vh;
+    color: #555;
+    #userTel {
+        font-weight: 500;
+        @include font-dpr(36px);
+    }
+    .userInfo {
+        @include px2rem(height, 336px);
+        @include distance-dpr(padding, 30px, x);
+        @include distance-dpr(padding, 20px, y);
+        @include px2rem(margin-bottom, 20px);
+        @include clearfix();
+        color: white;
+        .userInfo_box {
+            display: flex;
+            align-items: flex-end;
+        }
+        img {
+            @include px2rem(width, 120px);
+            @include px2rem(height, 120px);
+            vertical-align: bottom;
+        }
+        .userInfoDiv {
+            @include px2rem(min-width, 540px);
+            @include distance-dpr(padding, 20px, x);
+            padding-right: 0px;
+            vertical-align: bottom;
+            .securityLink {
+                color: white;
+                .icon-wodetubiao-14 {
+                    @include font-dpr(30px);
+                    vertical-align: middle;
+                    @include px2rem(margin-left,8px);
+                }
+            }
+            .user_safety {
+                @include font-dpr(26px);
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .userloaddiv {
+            display: flex;
+            float: left;
+            width: 100%;
+            @include px2rem(margin-top, 45px);
+            .usedloan {
+                @include font-dpr(26px);
+                flex: 3;
+                .usedAmount {
+                    @include font-dpr(60px);
+                    font-weight: 500;
+                    color: $base-font-yellow-color;
+                }
+            }
+            .myloan {
+                flex: 2;
+                @include font-dpr(26px);
+                .userLoanAmount {
+                    @include px2rem(margin-top, 38px);
+                    @include font-dpr(30px);
+                }
+            }
+            .applylink {
+                text-align: center;
+                background: -webkit-linear-gradient(#fff, #bbb);
+                @include border-radius-dpr(20px);
+                display: inline-block;
+                @include px2rem(width, 140px);
+                @include font-dpr(25px);
+                @include px2rem(margin-top, 10px);
+                color: $base-font-black-color;
+            }
+            .needApplyLoan {
+                flex: 1;
+                .noLoanheader {
+                    @include font-dpr(40px);
+                }
+                .applyBtn {
+                    position: relative;
+                    @include px2rem(top, 5px);
+                    @include px2rem(width, 180px);
+                }
+            }
+            .textAlginRight {
+                text-align: right;
+            }
+            .textAlginLeft {
+                text-align: left;
+            }
+        }
+    }
+    .loanLink {
+        display: flex;
+        @include distance-dpr(padding, 30px, x);
+        @include px2rem(margin-bottom, 20px);
+        button {
+            @include font-dpr(36px);
+        }
+        .icon-wodetubiao-14 {
+            @include font-dpr(40px);
+            vertical-align: middle;
+            @include px2rem(margin-left, 15px);
+        }
+    }
+    #refuseInfo {
+        color: #ffb135;
+        text-decoration: underline;
+    }
+    .listSel {
+        @include distance-dpr(margin, 1px, y);
+        background: white;
+        @include distance-dpr(padding, 35px, x);
+        @include distance-dpr(padding, 15px, y);
+        color: #666;
+        text-decoration: none;
+        .personalInfo {
+            position: relative;
+            width: 100%;
+            @include px2rem(height, 50px);
+            .linkicon {
+                @include font-dpr(40px);
+                position: absolute;
+                @include px2rem(right, 10px);
+                @include px2rem(top, 10px);
+                font-size: 36px;
+                @include px2rem(line-height, 35px);
+            }
+            .icon-wodetubiao-14{
+                color:#ccc;
+            }
+        }
+        i {
+            @include font-dpr(50px);
+        }
+        a {
+            color: #555;
+            display: inline-block;
+            @include px2rem(margin-left, 10px);
+            @include px2rem(line-height, 50px);
+            width: 95%;
+            height: 100%;
+            position: absolute;
+            @include font-dpr(36px);
+            z-index: 99;
+        }
+    }
+    .usercheck {
+        @include px2rem(margin-bottom, 20px);
+    }
+}
+
+.userContent>div:last-of-type {
+    @include px2rem(margin-top, 20px);
+}

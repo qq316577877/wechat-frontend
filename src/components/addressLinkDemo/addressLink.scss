@@ -1,0 +1,29 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+
+#addressLink{
+  select{
+    width: 32%;
+    @include px2rem(height, 80px);
+    @include font-dpr(30px);
+  }
+  .addressInput{
+    @include px2rem(height, 80px);
+    @include px2rem(width, 400px);
+    @include font-dpr(30px);
+  }
+  .addressPicker{
+    position: absolute;
+    bottom:0;
+    //right:0;
+    //left:0;
+    .picker{
+      display: inline-block;
+      @include px2rem(width, 243px);
+    }
+    .picker-slot{
+      @include font-dpr(30px);
+    }
+  }
+}
+

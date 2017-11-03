@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+@import "../.././scss/main.scss";
+
+#addSupplier_send_page{
+  height: 100%;
+  background: #e7e7e7;
+  .setDefault{
+    @include font-dpr(30px);
+    @include px2rem(margin-top, 20px);
+    background-color: white;
+    @include px2rem(padding-left, 30px);
+    @include px2rem(padding-right, 30px);
+    @include px2rem(padding-top, 10px);
+    @include px2rem(padding-bottom, 20px);
+    input{
+      @include px2rem(width, 30px);
+      @include px2rem(height, 30px);
+      @include px2rem(margin-right, 20px);
+    }
+  }
+  #asupPostalCode{
+    @include px2rem(margin-bottom, 20px);
+  }
+}
+
+.addSupplierForm{
+  background-color: $white-bg-color;
+  @include px2rem(padding, 30px);
+  @include px2rem(padding-top, 10px);
+  @include px2rem(padding-bottom, 20px);
+  h5{
+    color:$product-time-color;
+    @include font-dpr(32px);
+  }
+  .phoneContry{
+      @include font-dpr(25px);
+  }
+  .horiControl{
+    width: 100%;
+  }
+  %formcontrol{
+    border: 1px solid $form-border-color;
+    @include px2rem(margin-top, 20px);
+    @include font-dpr(30px);
+    @include px2rem(text-indent, 30px);
+  }
+  .rightControl{
+    @include px2rem(width, 498px);
+  }
+  .phoneContry{
+    @include px2rem(width, 180px);
+  }
+  #asup_regionnum{
+    @include px2rem(width, 115px);
+  }
+  #asup_phonenum{
+    @include px2rem(width, 368px);
+  }
+  input{
+    @extend %formcontrol;
+    @include px2rem(height, 80px);
+  }
+  textarea{
+    @extend %formcontrol;
+    @include px2rem(padding-top, 25px);
+  }
+  .border_border_none{
+      border: none;
+  }
+}

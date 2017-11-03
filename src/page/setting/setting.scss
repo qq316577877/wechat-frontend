@@ -1,0 +1,44 @@
+@charset "utf-8";
+@import "../.././scss/main.scss";
+
+#settingPage {
+  //box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #EEEEEE;
+  .listSel{
+    margin-top: 0;
+    @include px2rem(height, 70px);
+    @include px2rem(line-height, 70px);
+     @include px2rem(margin-bottom, 20px);
+    background: white;
+    @include distance-dpr(padding,35px,x);
+    a{
+      color: #666;
+      @include font-dpr(30px);
+      width: 100%;
+      display: block;
+      z-index: 99;
+      position: absolute;
+    }
+    .iconSize{
+      @include font-dpr(40px);
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  }
+  .marginTop{
+    @include px2rem(margin-top, 70px);
+  }
+  .marginTop{
+    @include px2rem(padding-left, 35px);
+    @include px2rem(padding-right, 35px);
+    .exit{
+      width: 100%;
+    }
+  }
+}
+.personalInfo{
+  position: relative;
+}
